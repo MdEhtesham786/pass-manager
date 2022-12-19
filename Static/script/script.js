@@ -6,7 +6,7 @@ setInterval(() => {
         timer = 1
     }
     if (timer === 1) {
-        dynamic = 'App name'
+        dynamic = 'App Name'
     } else if (timer === 2) {
         dynamic = 'Website Name'
     } else if (timer === 3) {

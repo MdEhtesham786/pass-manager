@@ -1,10 +1,10 @@
-const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 const modelSchema = new mongoose.Schema({
     appname: {
         type: String,
-        required: true
+        required: true,
     },
     username: {
         type: String,
@@ -20,10 +20,10 @@ const modelSchema = new mongoose.Schema({
     },
     userEmail: {
         type: String,
-        required: true
+        required: false
 
     }
-})
+});
 const registerSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -48,25 +48,25 @@ const registerSchema = new mongoose.Schema({
             }
         }
     ]
-})
+});
 //Generating token
 registerSchema.methods.generateAuthToken = async function () {
     try {
-        let token = jwt.sign({ _id: this.id }, process.env.SECRET_KEY)
-        this.tokens = this.tokens.concat({ token })
-        await this.save()
+        let token = jwt.sign({ _id: this.id }, process.env.SECRET_KEY);
+        this.tokens = this.tokens.concat({ token });
+        await this.save();
         return token;
     } catch (err) {
-        console.log(err)
+        console.log(err);
     }
-}
+};
 //Hashing
 registerSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
         this.password = await bcrypt.hash(this.password, 10);
-        next()
+        next();
     }
-})
-const Model = mongoose.model('user-data', modelSchema)
-const Register = mongoose.model('user-credentials', registerSchema)
-module.exports = { Model, Register }
+});
+const Model = mongoose.model('user-data', modelSchema);
+const Register = mongoose.model('user-credentials', registerSchema);
+module.exports = { Model, Register };

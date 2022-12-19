@@ -1,12 +1,15 @@
-let str = 'abcd'
+let str = 'hamza'
 
 //encrypt variables
+let encryptNewStr = ''
 let encryptCharArr;
 let encryptCharCodeArr = []
 let encryptFinalArr = []
 let newStr = ''
 let encryptNewArr = []
 //decrypt variables
+let decryptNewStr = ''
+
 let decryptCharArr;
 let decryptCharCodeArr = []
 let decryptFinalArr = []
@@ -33,9 +36,12 @@ function decrypt(str) {
     decryptNewStr = decryptFinalArr.join('')
 }
 encrypt(str)
-decrypt(newStr)
+decrypt(encryptNewStr)
 console.log('plain text:', str)
 console.log('encrypted:', encryptNewStr)
 console.log('decrypted:', decryptNewStr)
 
 // let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ',]
+// arr.forEach((char) => {
+//     console.log(char.charCodeAt())
+// })

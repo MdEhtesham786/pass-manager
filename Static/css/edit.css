@@ -15,12 +15,12 @@
 }
 
 .container {
-    height: 20vw;
-    width: 50vw;
+    height: 20rem;
+    width: 50rem;
     background-color: #cba592;
     display: grid;
     grid-template-columns: 1fr 1fr .5fr;
-    border: .4vw solid black;
+    border: .4rem solid black;
 
 }
 
@@ -34,8 +34,8 @@
 
 .title {
     /* background-color: white; */
-    font-size: 1.4vw;
-    padding-left: 2vw;
+    font-size: 1.3rem;
+    padding-left: 2rem;
     font-weight: bold;
 }
 
@@ -48,14 +48,20 @@
 
 .all-contents label {
     /* background-color: purple; */
-    margin-top: .6vw;
-    font-size: 1.2vw;
+    margin-top: 1rem;
+    font-size: 1.1rem;
 }
 
 .all-contents input {
-    width: 15vw;
-    margin-bottom: 1.2vw;
-    font-size: 1.2vw;
+    width: 15rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.all-contents input:focus {
+    outline: none;
 
 }
 
@@ -67,12 +73,12 @@
 }
 
 .edit {
-    height: 2.5vw;
-    width: 5vw;
+    height: 2.5rem;
+    width: 5rem;
     background-color: blue;
     color: black;
-    border-radius: .5vw;
-    font-size: 1.2vw;
+    border-radius: .5rem;
+    font-size: 1.1rem;
 
 }
 
@@ -83,12 +89,12 @@
 }
 
 .cancel {
-    height: 2.5vw;
-    width: 5vw;
+    height: 2.5rem;
+    width: 5rem;
     background-color: red;
     color: black;
-    border-radius: .5vw;
-    font-size: 1.2vw;
+    border-radius: .5rem;
+    font-size: 1.1rem;
 
 }
 
@@ -96,4 +102,77 @@
     background-color: rgb(209, 85, 85);
     color: white;
 
+}
+
+
+
+@media (max-width:650px) {
+    html {
+        /* background-color: red; */
+        font-size: 15px;
+    }
+
+
+}
+
+@media (max-width:570px) {
+    html {
+        /* background-color: red; */
+        font-size: 14px;
+    }
+}
+
+@media (max-width:540px) {
+    html {
+        /* background-color: red; */
+        font-size: 13px;
+    }
+}
+
+@media (max-width:490px) {
+    html {
+        /* background-color: red; */
+        font-size: 12px;
+    }
+}
+
+@media (max-width:460px) {
+    html {
+        /* background-color: red; */
+        font-size: 11px;
+    }
+
+    .container {
+        margin-bottom: 20rem;
+    }
+}
+
+@media (max-width:420px) {
+    html {
+        /* background-color: red; */
+        font-size: 10px;
+    }
+
+
+}
+
+@media (max-width:380px) {
+    html {
+        /* background-color: red; */
+        font-size: 9px;
+    }
+}
+
+@media (max-width:340px) {
+    html {
+        /* background-color: red; */
+        font-size: 8px;
+    }
+}
+
+@media (max-width:310px) {
+    html {
+        /* background-color: red; */
+        font-size: 7px;
+    }
 }

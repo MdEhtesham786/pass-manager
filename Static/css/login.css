@@ -10,8 +10,12 @@
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
 
+}
+
+.main {
+    background-color: red;
 }
 
 section {
@@ -66,7 +70,8 @@ section .color:nth-child(4) {
 .main-container {
     position: absolute;
     top: 10vw;
-    left: 38vw;
+    left: 35vw;
+    right: 35vw;
     background: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
 
 }
